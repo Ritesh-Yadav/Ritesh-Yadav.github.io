@@ -17,12 +17,27 @@
   }
 }
 
+
+.archive__subtitle::after {
+  background: $primary-color;
+  content: '';
+  display: block;
+  height: 2px;
+  margin: 0.75em auto 0 auto;
+  position: relative;
+  width: 4em;
+}
+
 .archive__subtitle {
   margin: 1.414em 0 0;
   padding-bottom: 0.5em;
   font-size: $type-size-5;
   color: $muted-text-color;
-  border-bottom: 1px solid $border-color;
+  font-weight: 800;
+  letter-spacing: .25em;
+  line-height: 1.65;
+  text-transform: uppercase;
+  text-align: center;
 
   + .list__item .archive__item-title {
     margin-top: 0.5em;

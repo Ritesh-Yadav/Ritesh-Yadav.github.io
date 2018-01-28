@@ -85,8 +85,8 @@ analytics:
 # Site Author
 author:
   name             : "Ritesh Yadav"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Techinal QA"
+  avatar           : "/assets/images/bio-photo.jpg"
+  bio              : "Techolic QA Consultant / SDET"
   location         : "Manchester (UK)"
   email            : 
   uri              :
@@ -94,16 +94,16 @@ author:
   bitbucket        :
   codepen          :
   dribbble         :
-  flickr           : https://www.flickr.com/photos/72816977@N05/
+  flickr           : photos/72816977@N05/
   facebook         :
   foursquare       :
-  github           : https://github.com/Ritesh-Yadav
+  github           : Ritesh-Yadav
   gitlab           :
   google_plus      :
   keybase          :
   instagram        :
   lastfm           :
-  linkedin         : https://uk.linkedin.com/in/yadavritesh
+  linkedin         : yadavritesh
   pinterest        :
   soundcloud       :
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
@@ -250,6 +250,6 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
