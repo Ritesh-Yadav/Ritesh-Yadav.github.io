@@ -20,7 +20,7 @@ teaser                   : "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
+  provider               : "staticman_v2"
   disqus:
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -31,31 +31,31 @@ comments:
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
 staticman:
-  allowedFields          : # ['name', 'email', 'url', 'message']
-  branch                 : # "master"
-  commitMessage          : # "New comment."
-  filename               : # comment-{@timestamp}
-  format                 : # "yml"
-  moderation             : # true
-  path                   : # "/_data/comments/{options.slug}" (default)
-  requiredFields         : # ['name', 'email', 'message']
+  allowedFields          : ['name', 'url', 'message']
+  branch                 : "master"
+  commitMessage          : "New comment."
+  filename               : comment-{@timestamp}
+  format                 : "yml"
+  moderation             : true
+  path                   : "/_data/comments/{options.slug}"
+  requiredFields         : ['name', 'message']
   transforms:
     email                : # "md5"
   generatedFields:
     date:
-      type               : # "date"
+      type               : "date"
       options:
-        format           : # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
+        format           : "iso8601"
 reCaptcha:
-  siteKey                :
-  secret                 :
+  siteKey                : "6LfIK0MUAAAAAGaIxMgcWd--wkUU1KMXkcEIJi98"
+  secret                 : "6LfIK0MUAAAAAI5A1ptBs0mIiR6snTIKQ2hpma5w"
 atom_feed:
   path                   : # blank (default) uses feed.xml
 search                   : true
 search_full_content      : true
 
 # SEO Related
-google_site_verification :
+google_site_verification : "AIzaSyBs6uY50PaU2-tgOTxb4PFZBrHiKKjpfeI"
 bing_site_verification   :
 yandex_site_verification :
 naver_site_verification  :

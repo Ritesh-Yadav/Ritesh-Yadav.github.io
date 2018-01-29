@@ -1,5 +1,6 @@
 ---
 title:  "Quick and Simple Web APP on Heroku Using Python Flask"
+comments: true
 categories: 
   - Tech
 tags:
