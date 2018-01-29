@@ -227,6 +227,7 @@ figure {
     border-radius: $border-radius;
     -webkit-transition: $global-transition;
     transition: $global-transition;
+    border: .05em solid $border-color;
   }
 
   > a {
