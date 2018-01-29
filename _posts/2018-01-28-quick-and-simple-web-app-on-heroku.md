@@ -17,16 +17,16 @@ In this post, I am going to show you how you can deploy a simple app in Heroku. 
 
 ## Pre-requisites
 
-1. [Heroku Account](https://id.heroku.com/login) (Free account is good enough for the purpose)
+1. [Heroku Account](https://id.heroku.com/login) (Free account is good enough for this purpose)
 2. [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
 3. Python 2.7 or greater
 4. [Git CommandLine](https://desktop.github.com/) Desktop version has option to install commandline as well
 
 ## Create App in Heroku
 
-Step 1. Login to your Heroku account. After successful login, you will see dashboard page.
+Step 1. Log in to your Heroku account. After successful login, you will see dashboard page.
 
-Step 2. Click on `New` and `Create New App` option
+Step 2. Click on `New` ➝ `Create New App` option
 {% include figure image_path="assets/images/quick-and-simple-web-app-on-heroku/HerokuDashboard.jpg" alt="Heroku Dashboard" %}
 
 Step 3. Choose an app name for your app. You have to use this name to get SSL certificate. In my case, I am going to use `ry-dev`
@@ -40,7 +40,7 @@ We are going to use Heroku Git for the purpose of this example. But you can try 
 
 {% include figure image_path="assets/images/quick-and-simple-web-app-on-heroku/HerokuGitDeployment.jpg" alt="Heroku Git Deployment" %}
 
-After completing above steps. You should see your website **_APPNAME_.herokuapp.com** (e.g. ry-dev.herokuapp.com) up and running in Heroku.
+After completing above steps. You should see your website **_\<APPNAME>_.herokuapp.com** (e.g. ry-dev.herokuapp.com) up and running in Heroku.
 
 ## Python Flask App
 
@@ -128,4 +128,4 @@ Step 2. Push your code to Heroku
 $ git push heroku master
 ```
 
-Step 3. Now, You should see your website **_APPNAME_.herokuapp.com** (e.g. ry-dev.herokuapp.com) up and running in Heroku.
+Step 3. Now, You should see your website **_\<APPNAME>_.herokuapp.com** (e.g. ry-dev.herokuapp.com) up and running in Heroku.
