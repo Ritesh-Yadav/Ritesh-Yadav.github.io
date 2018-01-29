@@ -2,7 +2,7 @@
 main:
    - title: "About"
      url: /#
-   - title: "Blog Posts"
-     url: /#
-   - title: "Collections"
-     url: /#
+   - title: "Posts By Tag"
+     url: /tags/
+   - title: "Posts By Category"
+     url: /categories/
