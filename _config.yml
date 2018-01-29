@@ -47,7 +47,7 @@ staticman:
       options:
         format           : "iso8601"
 reCaptcha:
-  siteKey                : "6LdRBykTAAAAAFB46MnIu6ixuxwu9W1ihFF8G60Q"
+  siteKey                : "6LfELEMUAAAAACUcLf8dzgY0RGFPi6GTNjC-chBM"
   secret                 : "NavymSbGusyj9KGd47oPBCDJWke1vDPdWzYut0ysUiN91qz8ZPHvVbc0VQU4LyA5uPFGodblzk8VOvjYV5LlBVS4KPTCMOSWZGngAl9E6i1F4FoTlcLkWrSdf8So4c9/F6bObyckEqELI3nx0mbkO35zmh8WZd/RISfisVsJ7IQ="
 atom_feed:
   path                   : # blank (default) uses feed.xml
