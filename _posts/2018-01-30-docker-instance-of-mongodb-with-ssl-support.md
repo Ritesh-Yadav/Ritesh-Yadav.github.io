@@ -11,7 +11,7 @@ tags:
   - Docker
 ---
 
-There are instances when you want to create MongoDB instance in Docker to use in production or in local/internal. We came across this requirement where we were using [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) for production but wanted to use [MongoDB docker](https://hub.docker.com/_/mongo/) in our local/internal/dev environment. Mongo Atlas uses SSL connection so we want to keep out local consistent with production environment. In this post, I am going to explain the process of creating Mongo Docker instance with valid SSL certificate and replicating same behavior of MongoDB Atlas.
+There are instances when you want to create MongoDB instance in Docker to use in production or in local/internal. We came across this requirement where we were using [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) for production but wanted to use [MongoDB docker](https://hub.docker.com/_/mongo/) in our local/internal/dev environment. Mongo Atlas uses SSL connection so we want to keep our local consistent with production environment. In this post, I am going to explain the process of creating Mongo Docker instance with valid SSL certificate and replicating same behavior of MongoDB Atlas.
 
 Note: You can use same process for your production MongoDB instance as well, if you are not using any cloud solution for MongoDB
 {: .notice}
