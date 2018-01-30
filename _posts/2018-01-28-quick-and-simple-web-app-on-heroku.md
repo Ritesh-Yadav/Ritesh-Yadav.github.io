@@ -73,6 +73,7 @@ This file is required by Heroku to install all the required packages.
 {: .notice}
 
 Step 4. Create python file (In my case, I am going to create `server.py`) and add following to the file:
+{: #pfa_step4}
 
 ```python
 import os
@@ -116,6 +117,7 @@ Step 7. Open `http://localhost:5000` and verify your site is up and running.
 Now, the final step in the process.
 
 Step 1. Add your code into repository
+{: #dth_step1}
 
 ```bash
 $ git add .
