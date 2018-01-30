@@ -20,12 +20,14 @@ As we are moving towards CI and CD, it's very important to have same environment
 
 ## Problem Statement
 
-When we use self signed certificate to enable SSL support for our applications in Local Dev environment, we face issue related to validity of that certificate. In order to fix the issue we have to do lots of work around like adding CA certificate in your trust store or ignoring the warning by browser etc. However, you can get a valid certificate from any valid Certificate Authority and that will make evrything go away. [Let’s Encrypt](https://letsencrypt.org/) is open source :heart: valid Certificate Authority which we are going to use in this case.
+When we use self signed certificate to enable SSL support for our applications in Local Dev environment, we face issue related to validity of that certificate. In order to fix the issue we have to do lots of work around like adding CA certificate in your trust store or ignoring the warning by browser etc. However, you can get a valid certificate from any valid Certificate Authority and that will make everything go away. [Let’s Encrypt](https://letsencrypt.org/) is open source :heart: valid Certificate Authority which we are going to use in this case.
+
+## Prerequisites
 
 1. [Heroku Account](https://id.heroku.com/login) (Free account is good enough for this purpose)
 2. [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
 3. Python 2.7 or greater
-4. [Git CommandLine](https://desktop.github.com/) Desktop version has option to install commandline as well
+4. [Git CommandLine](https://desktop.github.com/) Desktop version has option to install command line as well
 5. [OpenSSL](https://www.openssl.org/)
 6. Install [certbot](https://certbot.eff.org/) in your machine. I am going to use MacOS here, however the steps (except installation) would be same for any other operating system. You can run following command in MacOSX
 
@@ -35,22 +37,21 @@ $ brew install certbot
 
 ## Certificate Generation
 
-Step 1. Please read and follow [Quick and Simple Web APP on Heroku Using Python Flask]({{ "/tech/quick-and-simple-web-app-on-heroku/" | absolute_url }})
+**Step 1.** Please read and follow [Quick and Simple Web APP on Heroku Using Python Flask]({{ "/tech/quick-and-simple-web-app-on-heroku/" | absolute_url }})
 {: #pr_step1}
 
-Step 2. Once you have certbot installed, run following to get certificate
+**Step 2.** Once you have certbot installed, run following to get certificate
 
 ```bash
 $ sudo certbot certonly --manual
 ```
 
-Provide required information when promted by tool. When asked for domain name, enter FQDN (Fully Qualified Domain Name) of your app created in [Step 1](#pr_step1). It will ask to log your IP as well to public domain as you are asking for a certificate. After that you will see prompt like following asking `Press Enter to Continue`. Do not press enter yet.
+Provide required information when prompted by tool. When asked for domain name, enter FQDN (Fully Qualified Domain Name) of your app created in [Step 1](#pr_step1). It will ask to log your IP as well to public domain as you are asking for a certificate. After that you will see prompt like following asking `Press Enter to Continue`. Do not press enter yet.
 {: #pr_step2}
 
-{% include figure image_path="assets/images/getting-valid-ssl-certificate-for-localhost-from-letsencrypt/certbotOutput.jpg" alt="CertBot Output" %} 
+{% include figure image_path="assets/images/getting-valid-ssl-certificate-for-localhost-from-letsencrypt/certbotOutput.jpg" alt="CertBot Output" %}
 
-
-Step 3. Now, we are going to use our [flask server app]({{ "/tech/quick-and-simple-web-app-on-heroku/#pfa_step4" | absolute_url }}) to host a page with details mentioned in above pic. I am going to user server.py file to enter details as follow:
+**Step 3.** Now, we are going to use our [flask server app]({{ "/tech/quick-and-simple-web-app-on-heroku/#pfa_step4" | absolute_url }}) to host a page with details mentioned in above pic. I am going to user server.py file to enter details as follow:
 
 ```python
 import os
@@ -69,11 +70,11 @@ if __name__ == "__main__":
     app.run(host='0.0.0.0', port=port)
 ```
 
-Step 4. Run your `server.py` file to check it match the expectation mentioned by [certbot console output](#pr_step2)
+**Step 4.** Run your `server.py` file to check it match the expectation mentioned by [certbot console output](#pr_step2)
 
-Step 5. Push your [flask server app]({{ "/tech/quick-and-simple-web-app-on-heroku/#dth_step1" | absolute_url }}) to Heroku
+**Step 5.** Push your [flask server app]({{ "/tech/quick-and-simple-web-app-on-heroku/#dth_step1" | absolute_url }}) to Heroku
 
-Step 6. Now, go back to [certbot console](#pr_step2) and hit enter. After this, you would see location of your certificate created by Let's Encrypt. Letsencrypt will create the following certs:
+**Step 6.** Now, go back to [certbot console](#pr_step2) and hit enter. After this, you would see location of your certificate created by Let's Encrypt. Let's Encrypt will create the following certs:
 
 * cert.pem
 * chain.pem
@@ -82,24 +83,24 @@ Step 6. Now, go back to [certbot console](#pr_step2) and hit enter. After this, 
 
 ## CA and SSL Certificate
 
-Once you get certifactes from Let's Encrypt, you can create Root CA certificate and certificate to use with your application. 
+Once you get certificates from Let's Encrypt, you can create Root CA certificate and certificate to use with your application.
 
-Step 1. Create certificate for your application. Inorder to do that you have to combine `privkey.pem` and `cert.pem`. You can use any text editor or command line. Here's the example of command line approach.
+**Step 1.** Create certificate for your application. In order to do that you have to combine `privkey.pem` and `cert.pem`. You can use any text editor or command line. Here's the example of command line approach.
 
 ```bash
 $ cd <location of your certificates>
 $ cat privkey.pem cert.pem > myapp.pem
 ```
 
-Step 2. In order to genearate CA certificate, you need to download IdenTrust DST Root CA X3 from https://www.identrust.com/certificates/trustid/root-download-x3.html. Save it to a file (e.g. `IdenTrustCA.crt`) and add `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----` lines.
+**Step 2.** In order to generate CA certificate, you need to download IdenTrust DST Root CA X3 from https://www.identrust.com/certificates/trustid/root-download-x3.html. Save it to a file (e.g. `IdenTrustCA.crt`) and add `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----` lines.
 
-Step 3. Convert `IdenTrustCA.crt` this certificate to pem using openssl
+**Step 3.** Convert `IdenTrustCA.crt` this certificate to pem using openssl
 
 ```bash
 $ openssl x509 -in IdenTrustCA.crt -out IdenTrustCA.pem -outform PEM
 ```
 
-Step 4. Now combine `IdenTrustCA.pem` and `chain.pem`
+**Step 4.** Now combine `IdenTrustCA.pem` and `chain.pem`
 
 ```bash
 cat IdenTrustCA.pem chain.pem > ca.pem
@@ -157,7 +158,8 @@ KOqkqm57TH2H3eDJAkSnh6/DNFu0Qg==
 -----END CERTIFICATE-----
 ```
 
-Step 5. Let's verify our app certificate with CA certificate
+**Step 5.** Let's verify our app certificate with CA certificate
+{: #verifycert}
 
 ```bash
 $ openssl verify -CAfile ca.pem myapp.pem
@@ -169,9 +171,10 @@ Congratulation now you have a valid certificate for your application.
 
 ## Local or Dev Machine Host Mapping
 
-You need make sure that your dev machine IP or localhost is mapped to domain name you have used to obtian certificate. 
+You need make sure that your dev machine IP or localhost is mapped to domain name you have used to obtain certificate.
+{: #hostentry}
 
-You can make entry in your `/etc/hosts` file to achive it
+You can make entry in your `/etc/hosts` file to achieve it
 
 ```bash
 127.0.0.1           localhost ry-dev.herokuapp.com
