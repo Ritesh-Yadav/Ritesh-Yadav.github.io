@@ -9,11 +9,16 @@ tags:
   - Software
 ---
 
-Tools to increase daily productivity and simplify your job 
+A list of tried and tested tools in MAC, Linux and windows to increase daily productivity and simplify your job 
 {% include base_path %}
 {% include toc title="Index" %}
 
 ## Tools
+
+### Alfred 3
+
+[Alfred](https://www.alfredapp.com/) is an award-winning app for Mac OS X which boosts your efficiency with hotkeys, 
+keywords, text expansion and more. Search your Mac and the web, and be more productive with custom actions to control your Mac.
 
 ### Amphetamine
 
@@ -90,6 +95,22 @@ Also, allow to uploads it to the Web, FTP, computer or clipboard.
 ### Jsonlint
 
 [Jsonlint](http://zaach.github.com/jsonlint/) is JSON parser and validator with a CLI.
+
+### Launchy
+
+[Launchy](http://www.launchy.net/index.php) is a free cross-platform utility designed to help you forget about your start menu, 
+the icons on your desktop, and even your file manager.
+Launchy indexes the programs in your start menu and can launch your documents, project files, folders, and bookmarks with just a few keystrokes!
+
+### MultiTail
+
+[MultiTail](https://www.vanheusden.com/multitail/features.php) allows you to monitor logfiles and command output in 
+multiple windows in a terminal, colorize, filter and merge.
+
+### Notepad++
+
+[Notepad++](https://notepad-plus-plus.org/) is a free source code editor and Notepad replacement that supports several languages. 
+Running in the MS Windows environment, its use is governed by GPL License. It has many useful plugins which can be installed on need basis.
 
 ### OBS Studio
 
