@@ -1,5 +1,5 @@
 ---
-title:  "Tools to Increase Daily Productivity and Simplify Your Job"
+title:  "Tools to Increase Daily Productivity and Simplify My Job"
 comments: true
 categories: 
   - Tech
