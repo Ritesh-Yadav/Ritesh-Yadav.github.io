@@ -9,7 +9,7 @@ tags:
   - Software
 ---
 
-A list of tried and tested tools in MAC, Linux and windows to increase daily productivity and simplify your job 
+A list of tried and tested free tools in MAC, Linux and windows to increase daily productivity and simplify my job 
 {% include base_path %}
 {% include toc title="Index" %}
 
@@ -45,6 +45,11 @@ by just holding the ⌘-Key a bit longer. It's as simple as that.
 [Cmder](https://github.com/cmderdev/cmder) is a software package created out of pure frustration over absence of usable console emulator on Windows. 
 It is based on ConEmu with major config overhaul, comes with a Monokai color scheme, amazing clink 
 (further enhanced by clink-completions) and a custom prompt layout.
+
+### Disk Inventory X
+
+[Disk Inventory X](http://www.derlien.com/) is a disk usage utility for Mac OS X 10.3 (and later). 
+It shows the sizes of files and folders in a special graphical way called treemaps. 
 
 ### Epic Browser
 
@@ -145,6 +150,10 @@ It includes support for debugging, embedded Git control, syntax highlighting, in
 [VLC](https://www.videolan.org/vlc/index.en-GB.html) is a free and open source cross-platform multimedia player and 
 framework that plays most multimedia files as well as DVDs, Audio CDs, VCDs, and various streaming protocols. 
 You can also convert/compress audios and videos in the app.
+
+### WinDirStat
+
+[WinDirStat](https://windirstat.net/) is a disk usage statistics viewer and cleanup tool for various versions of Microsoft Windows.
 
 ### ZSH
 
