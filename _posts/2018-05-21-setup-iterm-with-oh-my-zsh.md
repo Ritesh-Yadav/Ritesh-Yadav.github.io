@@ -120,6 +120,7 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 **ProTip**: To reload any change made in `~/.zshrc` file, use `source ~/.zshrc` command.
 {: .notice--info #plugin_demo}
+
 {% include figure image_path="assets/images/setup-iterm-with-oh-my-zsh/plugins_demo.gif" %}
 
 ## Working with Alias
