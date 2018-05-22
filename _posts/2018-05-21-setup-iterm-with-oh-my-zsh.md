@@ -20,7 +20,7 @@ windows but not as good as iTerm2. If you combine iTerm with Zsh and Oh-My-Zsh t
 
 ## Install iTerm2
 
-Download a stable build from https://www.iterm2.com/downloads.html and install it.
+Download a stable build from [https://www.iterm2.com/downloads.html](https://www.iterm2.com/downloads.html) and install it.
 
 ## Install Brew
 
