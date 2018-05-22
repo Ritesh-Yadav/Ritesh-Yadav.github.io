@@ -161,6 +161,24 @@ pre {
   overflow-x: auto; /* add scrollbars to wide code blocks*/
 }
 
+kbd {
+  border: 1px solid #aaa;
+  -moz-border-radius: $border-radius;
+  -webkit-border-radius: $border-radius;
+  border-radius: $border-radius;
+  -moz-box-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.1);
+  box-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.1);
+  background-color: $code-background-color;
+  background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee);
+  background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee);
+  background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee);
+  background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee);
+  padding: 0.1em 0.3em;
+  font-family: inherit;
+  font-size: $type-size-6;
+}
+
 p > code,
 a > code,
 li > code,
@@ -214,7 +232,7 @@ figure {
   -webkit-box-align: start;
   align-items: flex-start;
   flex-wrap: wrap;
-  margin: 2em 0;
+  margin: 1em 0;
 
   img,
   iframe,
