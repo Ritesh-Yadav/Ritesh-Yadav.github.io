@@ -11,18 +11,18 @@ tags:
   - Ligature
 ---
 
-As a software engineer, we spend significant amount of time in terminal. Mac OSX provide terminal better than 
-windows terminal but it's not as good as iTerm2. If you combine iTerm with Zsh and Oh-My-Zsh then you get awesomeness.
+As a software engineer, we spend significant amount of time in terminal. Terminal in Mac OSX is better than 
+windows but not as good as iTerm2. If you combine iTerm with Zsh and Oh-My-Zsh then what you get is awesomeness.
 
 {% include base_path %}
 
 {% include toc title="Index" %}
 
-## iTerm2
+## Install iTerm2
 
 Download a stable build from https://www.iterm2.com/downloads.html and install it.
 
-## Brew
+## Install Brew
 
 [Homebrew](https://brew.sh/) is a free and open-source software package management system that simplifies the 
 installation of software on Apple's macOS operating system.
@@ -33,7 +33,7 @@ Now, open iTerm and install `brew` using following command:
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-## Fira Code Font
+## Install and Configure Fira Code Font
 
 Fira Code is an extension of the Fira Mono font containing a set of ligatures for common programming multi-character combinations. 
 This is just a font rendering feature: underlying code remains ASCII-compatible. This helps to read and understand code faster.
@@ -42,7 +42,7 @@ This is just a font rendering feature: underlying code remains ASCII-compatible.
 
 {% include figure image_path="assets/images/setup-iterm-with-oh-my-zsh/without-fira-code.png" %}
 
-### With Fira Code
+### With Fira Code and Ligature
 
 {% include figure image_path="assets/images/setup-iterm-with-oh-my-zsh/with-fira-code.png" %}
 
@@ -65,7 +65,7 @@ brew cask install font-fira-code
 **Step 3.** Go to `Text` tab. Change font and ASCII font to `Fira Code` and enable use of ligature
   {% include figure image_path="assets/images/setup-iterm-with-oh-my-zsh/select_font.gif" %}
 
-## Zsh
+## Install Zsh
 
 Once you have `brew` installed, you can install `zsh` using following command:
 
@@ -73,11 +73,12 @@ Once you have `brew` installed, you can install `zsh` using following command:
 brew install zsh
 ```
 
-## Oh-My-Zsh
+## Install and Configure Oh-My-Zsh
 
 [Oh-My-Zsh](http://ohmyz.sh/) is an open source, community-driven framework for managing your ZSH configuration. 
 It comes bundled with a ton of helpful functions, helpers, plugins, themes and much more.
 
+Install Oh-My-Zsh using following command:
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
@@ -117,13 +118,13 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ```
 
-**ProTip**: To reload any change in `~/.zshrc` file use `source ~/.zshrc` command.
+**ProTip**: To reload any change made in `~/.zshrc` file, use `source ~/.zshrc` command.
 {: .notice--info #plugin_demo}
 {% include figure image_path="assets/images/setup-iterm-with-oh-my-zsh/plugins_demo.gif" %}
 
-## Alias
+## Working with Alias
 
-Alias is not exclusive funtionality of zsh but Oh-my-zsh provides lots of alias by default. Lots of plugins also come with alias for example `git` plugin.
+Alias is not exclusive functionality of zsh but Oh-my-zsh provides lots of alias by default. Lots of plugins also come with alias for example `git` plugin.
 
 If you want to create your on aliases, create a separate file and load that file using `~/.zshrc` by adding following line in the file:
 
