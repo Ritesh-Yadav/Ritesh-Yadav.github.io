@@ -49,6 +49,7 @@ This is just a font rendering feature: underlying code remains ASCII-compatible.
 To install Fira Code, run following command:
 
 ```bash
+brew tap homebrew/cask-fonts
 brew cask install font-fira-code
 ```
 
