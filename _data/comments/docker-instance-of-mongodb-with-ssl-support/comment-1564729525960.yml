@@ -1,0 +1,6 @@
+_id: e6db38d0-b4f3-11e9-b0e1-5713ab9a9981
+message: "My docker container starts up with the following error message:\r\n\r\n`docker logs -f mymongo\r\n/usr/local/bin/docker-entrypoint.sh: line 340: /home/mongodb/scripts/run.sh: Permission denied`"
+name: Brian
+url: ''
+hidden: ''
+date: '2019-08-02T07:05:25.960Z'
