@@ -17,8 +17,7 @@ description              : "Helping Hand"
 url                      : "https://ritesh-yadav.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : ritesh-yadav/ritesh-yadav.github.io
-teaser                   : "/assets/images/500x300.png"
-# breadcrumbs            : false # true, false (default)
+breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
 comments:
   provider               : "staticman_v2"
@@ -174,3 +173,5 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+github: [metadata]
