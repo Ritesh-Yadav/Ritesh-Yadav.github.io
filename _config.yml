@@ -20,9 +20,9 @@ repository               : ritesh-yadav/ritesh-yadav.github.io
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : "staticman_v2"
+  provider               : "disqus"
   disqus:
-    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : "ritesh-yadav"
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -30,22 +30,6 @@ comments:
     appid                :
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
-staticman:
-  allowedFields          : ['name', 'url', 'message']
-  branch                 : "master"
-  commitMessage          : "New comment."
-  filename               : comment-{@timestamp}
-  format                 : "yml"
-  moderation             : true
-  path                   : "_data/comments/{options.slug}"
-  requiredFields         : ['name', 'message']
-  transforms:
-    email                : # "md5"
-  generatedFields:
-    date:
-      type               : "date"
-      options:
-        format           : "iso8601"
 reCaptcha:
   siteKey                : "6LfELEMUAAAAACUcLf8dzgY0RGFPi6GTNjC-chBM"
   secret                 : "NavymSbGusyj9KGd47oPBCDJWke1vDPdWzYut0ysUiN91qz8ZPHvVbc0VQU4LyA5uPFGodblzk8VOvjYV5LlBVS4KPTCMOSWZGngAl9E6i1F4FoTlcLkWrSdf8So4c9/F6bObyckEqELI3nx0mbkO35zmh8WZd/RISfisVsJ7IQ="
