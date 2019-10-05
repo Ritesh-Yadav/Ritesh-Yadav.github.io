@@ -11,6 +11,7 @@
 # Site settings
 locale                   : "en-US"
 title                    : "Not Just A QA"
+logo                     : "/assets/images/logo.png"
 title_separator          : "-"
 name                     : "Ritesh Yadav"
 description              : "Helping Hand"
