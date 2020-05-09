@@ -25,10 +25,20 @@ keywords, text expansion and more. Search your Mac and the web, and be more prod
 [Amphetamine](https://itunes.apple.com/us/app/amphetamine/id937984704?mt=12) is a little app that lives in your menu bar. 
 With Amphetamine, you can effortlessly override your energy saver settings and keep your Mac awake.
 
+### aText
+
+[aText](https://www.trankynam.com/atext/) accelerates your typing in any application by replacing abbreviations with frequently used phrases you define.
+Save your priceless time, stop typing the same thing over and over.
+Also known as text template, text shortcut, text expansion tool.
+
 ### Babun
 
 [Babun](http://babun.github.io) is pre-configured Cygwin with a lot of addons and integrated oh-my-zsh. 
 It also has pact - advanced package manager (like apt-get or yum) and xTerm-256 compatible console.
+
+### BitBar
+
+The [BitBar](https://getbitbar.com/) app lets you put the output from any script or program right in your Mac OS X menu bar. And it's completely free. An impressive number of plugins have already been contributed by a wide range of developers just like you, and this site makes it easy to find them.
 
 ### Brew
 
@@ -57,6 +67,10 @@ It shows the sizes of files and folders in a special graphical way called treema
 cryptomining, ultrasound signaling and more. Stop 600+ tracking attempts in an average browsing session. 
 Turn on network privacy with free VPN (servers in 8 countries).
 
+### FFMpeg
+
+[ffmpeg](https://www.ffmpeg.org/) is complete, cross-platform solution to record, convert and stream audio and video. It's a powerful command line tool and easy to use coverter as well.
+
 ### Flycut
 
 [Flycut](https://github.com/TermiT/Flycut) is a clean and simple clipboard manager for Mac OSX
@@ -71,6 +85,10 @@ record of what's taking so long.
 
 [Grammarly](https://www.grammarly.com/1) makes sure everything you type is easy to read, effective, and mistake-free. 
 There are plugins for most of browser types and desktops.
+
+### Hammerspoon
+
+[Hammerspoon](https://www.hammerspoon.org/) is a tool for powerful automation of OS X. At its core, Hammerspoon is just a bridge between the operating system and a Lua scripting engine. What gives Hammerspoon its power is a set of extensions that expose specific pieces of system functionality, to the user.
 
 ### iTerm2
 
@@ -107,6 +125,10 @@ Also, allow to uploads it to the Web, FTP, computer or clipboard.
 the icons on your desktop, and even your file manager.
 Launchy indexes the programs in your start menu and can launch your documents, project files, folders, and bookmarks with just a few keystrokes!
 
+### Maccy
+
+[Maccy](https://maccy.app/) is a lightweight clipboard manager for macOS. It keeps the history of what you copy and lets you quickly navigate, search, and use previous clipboard contents.
+
 ### MultiTail
 
 [MultiTail](https://www.vanheusden.com/multitail/features.php) allows you to monitor logfiles and command output in 
@@ -131,6 +153,10 @@ It comes bundled with a ton of helpful functions, helpers, plugins, themes and m
 [Pygments](http://pygments.org/) is a generic syntax highlighter suitable for use in code hosting, forums, wikis or 
 other applications that need to prettify source code.
 
+### Rectangle
+
+[Rectangle](https://rectangleapp.com) is a window management app based on Spectacle, written in Swift. Move and resize windows on macOS with keyboard shortcuts and snap areas.
+
 ### ScreenToGif
 
 [ScreenToGif](http://www.screentogif.com/) is screen, webcam and sketchboard recorder with an integrated editor for Windows.
@@ -139,6 +165,10 @@ other applications that need to prettify source code.
 
 [Spectacle](https://www.spectacleapp.com/) moves and resizes windows with ease. 
 Window control with simple and customizable keyboard shortcuts
+
+### TinyTake
+
+[TinyTake](https://tinytake.com/) is a free screen capture & video recording software for Microsoft Windows & Mac. With TinyTake, you can capture images and videos of your computer screen, add comments and share them with others in minutes. Videos captured are usually small size and good quality.
 
 ### Visual Studio Code
 
