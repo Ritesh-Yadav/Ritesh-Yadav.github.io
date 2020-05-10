@@ -34,12 +34,7 @@ Also known as text template, text shortcut, text expansion tool.
 ### Authy
 
 [Authy](https://authy.com/) is enable 2FA for your favorite sites. simple to setup, secure cloud backup, multi device support.
-https://authy.com/blog/authy-vs-google-authenticator/
-
-### Babun
-
-[Babun](http://babun.github.io) is pre-configured Cygwin with a lot of addons and integrated oh-my-zsh. 
-It also has pact - advanced package manager (like apt-get or yum) and xTerm-256 compatible console.
+Read [authy vs google authenticator](https://authy.com/blog/authy-vs-google-authenticator/) for more details.
 
 ### BitBar
 
