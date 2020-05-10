@@ -86,7 +86,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 ### Set Theme
 
-There are whole lot of themes to choose from [here](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes). 
+There are whole lot of themes to choose from [here](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes). [My personal customized theme](https://github.com/Ritesh-Yadav/Ritesh-Yadav.github.io/blob/master/ritz.zsh-theme) is based on bira theme.
 Change `ZSH_THEME=robbyrussell` to `ZSH_THEME=YOUR_FAV_THEME_NAME` into `~/.zshrc` file. After change reload shell by:
 
 ```bash
@@ -141,5 +141,3 @@ To list all the avaliable alias use command `alias` in the terminal.
 If your hotkeys for moving backward (<kbd>⌥ option</kbd> + <kbd>←</kbd>) and forward (<kbd>⌥ option</kbd> + <kbd>→</kbd>) word by word do not work in iTerm then change keys preset in your profile to `Natural Text Editing`.
 
 {% include figure image_path="assets/images/setup-iterm-with-oh-my-zsh/keys_preset.gif" %}
-
- 
