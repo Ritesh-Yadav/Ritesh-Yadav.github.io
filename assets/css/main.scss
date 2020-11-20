@@ -11,6 +11,10 @@ $link-color-visited: $primary-color;
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
+#main {
+  max-width: unset !important;
+}
+
 .taxonomy__section .list__item { margin-top: 2em; }
 .taxonomy__section .list__item:nth-child(1) {
   margin-top: 0.5em;
