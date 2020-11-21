@@ -122,7 +122,7 @@ plugins:
 author:
   name             : "Ritesh Yadav"
   avatar           : "/assets/images/bio-photo.jpg"
-  bio              : "Techolic QA Consultant / SDET"
+  bio              : "Techolic QA Consultant / SDET / DevOps"
   location         : "Manchester (UK)"
   home             : # null (default), "absolute or relative url to link to author home"
   flickr           : photos/72816977@N05/
