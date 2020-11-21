@@ -1,5 +1,5 @@
 ---
-title:  "How to get formatted certificate from AWS secret manager"
+title:  "Get formatted certificate from AWS secret manager"
 comments: true
 categories: 
   - Tech
@@ -55,7 +55,7 @@ certificate_secrets_file="secrets_file"
 aws secretsmanager get-secret-value --secret-id "arn:aws:secretsmanager:us-east-1:123456789:secret:my-fake-certificate-and-key-XQuwafs" --query "SecretString" --output text > "$certificate_secrets_file"
 
 cat "$certificate_secrets_file" | jq .key | tr -d '"' | base64 -D > "private_key"
-cat "$certificate_secrets_file" | jq .certificate | tr -d '"' | base64 -D > "private_certificate"
+cat "$certificate_secrets_file" | jq .certificate | tr -d '"' | base64 -D > "certificate"
 ```
 
 {% capture notice-1 %}
@@ -70,12 +70,12 @@ cat "$certificate_secrets_file" | jq .certificate | tr -d '"' | base64 -D > "pri
 - Followed by anything in brackets [], [ab/] would mean either a or b or /
 - ^ in [] means not, so followed by anything but the thing in the [], so [^\"] means anything except \" character. This pattern can be think of as non-greedy pattern.
 - \* is to repeat previous group so [^/]* means characters except \"
-- so far `sed -n 's|.*"certificate"[[:space:]]*:[[:space:]]*"\([^"]*\)` means search and remember value of certificate until next \"
-- value in json ends by \" so stop on the next \". Also, match the rest of the line after the value match so add .*
-- now the match remembered in group 1 (\1) is the value so replace match with stuff saved in group \1 and print: `sed -n 's|.*"certificate"[[:space:]]*:[[:space:]]*"\([^"]*\).*|\1|p'`
+- value in json ends by \" so the group match should stop on the next \". So far `sed -n 's|.*"certificate"[[:space:]]*:[[:space:]]*"\([^"]*\)` means search and remember value of certificate until next \"
+- Also, match the rest of the line after the whole value matches so we add .*
+- now the group 1 (\1), which has the value of certificate, will replace the whole matched pattern and print: `sed -n 's|.*"certificate"[[:space:]]*:[[:space:]]*"\([^"]*\).*|\1|p'`
 
 ```html
-match: {"certificate":"-----BEGIN CERTIFICATE----- MIICvDCCAiWgAwIBAgIURRLTUS8M410YQSbLw6ikm20d2VcwDQYJKoZIhvcNAQEL BQAwcDELMAkGA1UEBhMCVVMxDzANBgNVBAgMBk9yZWdvbjERMA8GA1UEBwwIUG9y dGxhbmQxFTATBgNVBAoMDENvbXBhbnkgTmFtZTEMMAoGA1UECwwDT3JnMRgwFgYD VQQDDA93d3cuZXhhbXBsZS5jb20wHhcNMjAxMTIwMTkzMDE0WhcNMjExMTIwMTkz VR0OBBYEFNXwO1c8ibaIVMaue4ZxKF7LvxyQMB8GA1UdIwQYMBaAFNXwO1c8ibaI VMaue4ZxKF7LvxyQMA8GA1UdEwEB/wQFMAMBAf8wDQYJKoZIhvcNAQELBQADgYEA Rh5UeR29i8kYSNtU2VRGnHYAK8s9FQy5GG3/lMWbzN1B/XJbIxlbTd+ZIXi/bq8L jR/OmvJS8UA7mJahUKJ4N2g9EvtuOcMjxl7BKE2bh8+3nt5Izd/05Bo/XcISlYWc R2G+w0QowQUVOCwyZcqB6gTyNSVy0rUKrssqRJX1qTk= -----END CERTIFICATE-----", "key": "-----BEGIN RSA PRIVATE KEY----- MIIC1DBOBgkqhkiG9w0BBQ0wQTApBgkqhkiG9w0BBQwwHAQIZ5X0htdHmJECAggA MAwGCCqGSIb3DQIJBQAwFAYIKoZIhvcNAwcECNFM5lixm1GfBIICgIBtV5Ig0h0I 8wzJfx4ffO3fjsy/qDg14zj5rHK3QlT11SW92AFrMYvmkKNzVBb8pOK1yQFjrM8m 9QBa1Kr3rfQ1CPiljm6XJahLKZ5ev/FmvQEx9KNo7be55+KAJ0uo+S+xRdgMP/Nf lecSRWGns30VsESDrXA9fbt8jdNyNEEAkMruAMajHNzSgQcOWHERt/Go6nWnEYBJ gifV6uSnCZXO6BZFYI28cubimX5LRISJY4HFDwp/desFJkzgPk5VWyrvOS2hYbW/ z9dgW4/lONK9cv/ktL9Yz9ZwmxlX9xGoPGC0hZ+U3nM1L6S322DC9wW23oYTbOE4 FOd+GTIAEXA07/o3chg09J7b+8aGw7ehN+P6WTO5n+pCLaV7Vg63hmodiktcp8VQ FS/iOVg1OhcE5gIKxbptrc5gryBrsX38WNuXryTBzJkHiptAbi99AfdlelaDA+iN QQn/QgWuPRQ= -----END RSA PRIVATE KEY-----"}
+Pattern match: {"certificate":"-----BEGIN CERTIFICATE----- MIICvDCCAiWgAwIBAgIURRLTUS8M410YQSbLw6ikm20d2VcwDQYJKoZIhvcNAQEL BQAwcDELMAkGA1UEBhMCVVMxDzANBgNVBAgMBk9yZWdvbjERMA8GA1UEBwwIUG9y dGxhbmQxFTATBgNVBAoMDENvbXBhbnkgTmFtZTEMMAoGA1UECwwDT3JnMRgwFgYD VQQDDA93d3cuZXhhbXBsZS5jb20wHhcNMjAxMTIwMTkzMDE0WhcNMjExMTIwMTkz VR0OBBYEFNXwO1c8ibaIVMaue4ZxKF7LvxyQMB8GA1UdIwQYMBaAFNXwO1c8ibaI VMaue4ZxKF7LvxyQMA8GA1UdEwEB/wQFMAMBAf8wDQYJKoZIhvcNAQELBQADgYEA Rh5UeR29i8kYSNtU2VRGnHYAK8s9FQy5GG3/lMWbzN1B/XJbIxlbTd+ZIXi/bq8L jR/OmvJS8UA7mJahUKJ4N2g9EvtuOcMjxl7BKE2bh8+3nt5Izd/05Bo/XcISlYWc R2G+w0QowQUVOCwyZcqB6gTyNSVy0rUKrssqRJX1qTk= -----END CERTIFICATE-----", "key": "-----BEGIN RSA PRIVATE KEY----- MIIC1DBOBgkqhkiG9w0BBQ0wQTApBgkqhkiG9w0BBQwwHAQIZ5X0htdHmJECAggA MAwGCCqGSIb3DQIJBQAwFAYIKoZIhvcNAwcECNFM5lixm1GfBIICgIBtV5Ig0h0I 8wzJfx4ffO3fjsy/qDg14zj5rHK3QlT11SW92AFrMYvmkKNzVBb8pOK1yQFjrM8m 9QBa1Kr3rfQ1CPiljm6XJahLKZ5ev/FmvQEx9KNo7be55+KAJ0uo+S+xRdgMP/Nf lecSRWGns30VsESDrXA9fbt8jdNyNEEAkMruAMajHNzSgQcOWHERt/Go6nWnEYBJ gifV6uSnCZXO6BZFYI28cubimX5LRISJY4HFDwp/desFJkzgPk5VWyrvOS2hYbW/ z9dgW4/lONK9cv/ktL9Yz9ZwmxlX9xGoPGC0hZ+U3nM1L6S322DC9wW23oYTbOE4 FOd+GTIAEXA07/o3chg09J7b+8aGw7ehN+P6WTO5n+pCLaV7Vg63hmodiktcp8VQ FS/iOVg1OhcE5gIKxbptrc5gryBrsX38WNuXryTBzJkHiptAbi99AfdlelaDA+iN QQn/QgWuPRQ= -----END RSA PRIVATE KEY-----"}
 Group 1: -----BEGIN CERTIFICATE----- MIICvDCCAiWgAwIBAgIURRLTUS8M410YQSbLw6ikm20d2VcwDQYJKoZIhvcNAQEL BQAwcDELMAkGA1UEBhMCVVMxDzANBgNVBAgMBk9yZWdvbjERMA8GA1UEBwwIUG9y dGxhbmQxFTATBgNVBAoMDENvbXBhbnkgTmFtZTEMMAoGA1UECwwDT3JnMRgwFgYD VQQDDA93d3cuZXhhbXBsZS5jb20wHhcNMjAxMTIwMTkzMDE0WhcNMjExMTIwMTkz VR0OBBYEFNXwO1c8ibaIVMaue4ZxKF7LvxyQMB8GA1UdIwQYMBaAFNXwO1c8ibaI VMaue4ZxKF7LvxyQMA8GA1UdEwEB/wQFMAMBAf8wDQYJKoZIhvcNAQELBQADgYEA Rh5UeR29i8kYSNtU2VRGnHYAK8s9FQy5GG3/lMWbzN1B/XJbIxlbTd+ZIXi/bq8L jR/OmvJS8UA7mJahUKJ4N2g9EvtuOcMjxl7BKE2bh8+3nt5Izd/05Bo/XcISlYWc R2G+w0QowQUVOCwyZcqB6gTyNSVy0rUKrssqRJX1qTk= -----END CERTIFICATE-----
 ```
 {% endcapture %}
@@ -94,8 +94,7 @@ certificate_secrets_file="secrets_file"
 aws secretsmanager get-secret-value --secret-id "arn:aws:secretsmanager:us-east-1:123456789:secret:my-fake-certificate-and-key-XQuwafs" --query "SecretString" --output text > "$certificate_secrets_file"
 
 cat "$certificate_secrets_file" | jq .key | tr -d '"' | awk 'BEGIN {RS=" "} /BEGIN|END|RSA|PRIVATE/ {printf $0 " "}; !/BEGIN|END|RSA|PRIVATE/ {print $0}' > "private_key"
-
-cat "$certificate_secrets_file" | jq .certificate | tr -d '"' | awk 'BEGIN {RS=" "} /BEGIN|END/ {printf $0 " "}; !/BEGIN|END/ {print $0}' > "private_certificate"
+cat "$certificate_secrets_file" | jq .certificate | tr -d '"' | awk 'BEGIN {RS=" "} /BEGIN|END/ {printf $0 " "}; !/BEGIN|END/ {print $0}' > "certificate"
 ```
 
 {% capture notice-2 %}
