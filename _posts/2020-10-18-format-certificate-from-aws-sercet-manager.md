@@ -7,7 +7,7 @@ tags:
   - aws
   - secret-manager
   - ssm
-  - Bash
+  - bash
   - tricks
   - awk
   - sed
@@ -80,7 +80,7 @@ Group 1: -----BEGIN CERTIFICATE----- MIICvDCCAiWgAwIBAgIURRLTUS8M410YQSbLw6ikm20
 ```
 {% endcapture %}
 
-<div class="notice" id="notice1">
+<div class="notice--info" id="notice1">
   {{ notice-1 | markdownify }}
 </div>
 
@@ -120,7 +120,7 @@ R2G+w0QowQUVOCwyZcqB6gTyNSVy0rUKrssqRJX1qTk=
 ```
 {% endcapture %}
 
-<div class="notice" id="notice2">
+<div class="notice--info" id="notice2">
   {{ notice-2 | markdownify }}
 </div>
 
@@ -135,3 +135,9 @@ replace(/ (?!(RSA|PRIVATE|KEY))/g, '\n')
 
 replace(/ (?!(CERTIFICATE))/g, '\n')
 ```
+
+## Finally
+
+There are other options like pushing certificates as binary in secret manager. Also, if you have python installed in the machine then you can user python inline to format certificate as well.
+
+Let me know in comment section if you have any other cool way of doing this.
