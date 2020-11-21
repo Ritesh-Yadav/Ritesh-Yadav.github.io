@@ -36,7 +36,7 @@ When you save certificates in AWS secret manager then it removes all the newline
 }
 ```
 
-In this post, I am going to discuss about different approach to solve this problem.
+In this post, I am going to discuss different approach to solve this problem.
 
 ## Using Base64 encoding
 
@@ -68,10 +68,10 @@ cat "$certificate_secrets_file" | jq .certificate | tr -d '"' | base64 -D > "cer
 - \| is used as separator instead of / to make it easier to read
 - Group match between brackets \( ... \), later accessible with \1,\2...
 - Followed by anything in brackets [], [ab/] would mean either a or b or /
-- ^ in [] means not, so followed by anything but the thing in the [], so [^\"] means anything except \" character. This pattern can be think of as non-greedy pattern.
+- ^ in [] means not, so followed by anything but the thing in the [], so [^\"] means anything except \" character. This pattern can be thought of as non-greedy pattern.
 - \* is to repeat previous group so [^/]* means characters except \"
 - value in json ends by \" so the group match should stop on the next \". So far `sed -n 's|.*"certificate"[[:space:]]*:[[:space:]]*"\([^"]*\)` means search and remember value of certificate until next \"
-- Also, match the rest of the line after the whole value matches so we add .*
+- Also, match the rest of the line after the whole value matches, so we add .*
 - now the group 1 (\1), which has the value of certificate, will replace the whole matched pattern and print: `sed -n 's|.*"certificate"[[:space:]]*:[[:space:]]*"\([^"]*\).*|\1|p'`
 
 ```html
