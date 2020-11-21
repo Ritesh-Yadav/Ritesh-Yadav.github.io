@@ -32,7 +32,7 @@ set -eu
 MAX_VERSION_DIFF=${1:-3}
 
 # space separated list of packages
-readonly IGNORE_PACKAGES=( @types/node )
+readonly IGNORE_PACKAGES=( @types/node @aws )
 OUTDATED_PACKAGES_COUNT=0
 
 function get_version_diff_based_on_semantic_versioning(){
@@ -143,7 +143,7 @@ Total outdated package: 7
 
 - `MAX_VERSION_DIFF=${1:-3}` script takes one optional argument for minor version difference. By default, it allows 3 minor version difference.
   - `./npm-outdated.sh 5` will allow 5 minor version difference. e.g. if the current used version is 4.5.0 and latest available is 4.11.0 then the difference would be calculated as 6 version difference. However, it will always complain about major version difference.  
-- `readonly IGNORE_PACKAGES=( @types/node )` has list of packages to ignore for outdated. More packages can be added in that list if you do not want to upgrade those for any reason. e.g. `readonly IGNORE_PACKAGES=( @types/node @aws/sdk )`
+- `readonly IGNORE_PACKAGES=( @types/node )` has list of packages to ignore for outdated. More packages can be added in that list if you do not want to upgrade those for any reason. e.g. `readonly IGNORE_PACKAGES=( @types/node @aws/sdk )`. Names are used as regular expression which means package name should start from whatever you mentioned in the list.
 
 ## Finally
 
