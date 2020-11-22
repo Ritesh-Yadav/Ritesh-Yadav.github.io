@@ -90,10 +90,11 @@ OUTDATED_PACKAGES="$(npm -s --verbose outdated | awk '$4 !~ "beta|rc|git"')"
 
 printf '%b\n' "$(echo "$OUTDATED_PACKAGES" | head -n 1)"
 ONLY_PACKAGES=$(echo "$OUTDATED_PACKAGES" | tail -n +2)
+ignore_packages=$(printf "|%s" "${IGNORE_PACKAGES[@]}")
 
-while read -r package; do 
+while read -r package; do
     package_name=$(echo "$package" | awk '{print $1}')
-    if [[ ! "${IGNORE_PACKAGES[*]}" =~ ${package_name} ]]; then
+    if [[ ! "${package_name}" =~ ^(${ignore_packages:1}) ]]; then
       check_outdated_package_versions "$package"
     fi
 done <<< "$ONLY_PACKAGES"
@@ -143,10 +144,10 @@ Total outdated package: 7
 
 - `MAX_VERSION_DIFF=${1:-3}` script takes one optional argument for minor version difference. By default, it allows 3 minor version difference.
   - `./npm-outdated.sh 5` will allow 5 minor version difference. e.g. if the current used version is 4.5.0 and latest available is 4.11.0 then the difference would be calculated as 6 version difference. However, it will always complain about major version difference.  
-- `readonly IGNORE_PACKAGES=( @types/node )` has list of packages to ignore for outdated. More packages can be added in that list if you do not want to upgrade those for any reason. e.g. `readonly IGNORE_PACKAGES=( @types/node @aws/sdk )`. Names are used as regular expression which means package name should start from whatever you mentioned in the list.
+- `readonly IGNORE_PACKAGES=( @types/node @aws )` has list of packages to ignore for outdated. More packages can be added in that list if you do not want to upgrade those for any reason. e.g. `readonly IGNORE_PACKAGES=( @types/node @aws/node )`. Names are used as regular expression which means package name should start from whatever you mentioned in the list.
 
 ## Finally
 
-You can use this script in your CI to make the build fail if the packages as outdated.
+You can use this script in your CI to make the build fail if the packages are outdated.
 
 Let me know in comment section if you have used any other tool or have any better option.
