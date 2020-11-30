@@ -47,6 +47,9 @@ $ base64 private_key > encoded_private_key
 $ base64 certificate > encoded_certificate
 ```
 
+:warning: Depending upon which `base64` flavour you are using, you might see new line character in the encoded file. If you see new line in the encode file then try using `-w 0` option. e.g `base64 -w 0 private_key > encoded_private_key`
+{: .notice--warning }
+
 When you want to download and use the certificate, just decode back. Certificate and key would be properly formatted. Following is the bash script to do so:
 
 ```bash
