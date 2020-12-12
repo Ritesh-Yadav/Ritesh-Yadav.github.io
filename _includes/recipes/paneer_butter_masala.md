@@ -2,7 +2,7 @@
 
 ## Ingredients
 
-- Paneer (200g)
+- Paneer (200g) (Personal preference in UK [Everest, Riya, Pakeeza, Tesco] > Apertina)
 - Butter ~ 100g
 - Onion (1 big - 150g)
 - Tomato (4 medium size - 400g)
@@ -37,7 +37,7 @@ You can use chicken instead of paneer to make butter chicken. You might want to 
 - Once the butter is melted, add onion, tomatoes and cashews in the pan. Keep stirring until tomatoes and onions are soft. Tomatoes and onions need to be softened not fully cooked. It will take approximately 3 to 4 minutes.
 - Once onions and tomatoes are soft then take those out into the wide bowl. Keep them aside to cool down.
 - Now put the pan off the hob. Cut paneer into cubes of a half centimetre to 1 centimetre.
-- Put a pan on the medium heat. Add half tablespoon butter in the pan. Once butter is melted, add paneer to it. Stir occasionally and make sure paneer does not turn golden. Once the paneer is soft and squishy. Take paneer out of the pan in a bowl.
+- If you are using very soft paneer like Apertina then skip this step, else continue. Put a pan on the medium heat. Add half tablespoon butter in the pan. Once butter is melted, add paneer to it. Stir occasionally and make sure paneer does not turn golden. Once the paneer is soft and squishy. Take paneer out of the pan in a bowl. 
 - When the tomato, onion and cashew mixture is cool down, then put it into the blender and make a silky smooth puree.
 - Put the puree through the sieve. Remove all the chunks and tomato skin.
 - Put the pan on the medium heat and add 1 to 2 tablespoon butter into the pan. Once butter is melted, add the puree into the pan. Be very careful because the puree will start splashing. Keep stirring and make sure puree does not stick to the pan. Cook for 1 minute with the lid on and stir occasionally.
