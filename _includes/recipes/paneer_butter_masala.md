@@ -24,12 +24,12 @@ Serves 2 people  ›  Prep: 5min  ›  Cook: 15min  ›  Extra time: 5min 
 - Deep pan with lid
 - 1 small bowl
 - 1 wide bowl
-- Blender to make a smooth gravy
+- Blender to make a smooth puree
 - Sieve to remove any chunk or tomato skin from puree to make it silky smooth
 
 ## Pro Tip
 
-You can use chicken instead of paneer to make butter chicken. You might want to roast the chicken before putting into the gravy.
+You can use chicken instead of paneer to make butter chicken. You might want to roast the chicken before putting into the curry.
 
 ## Steps
 

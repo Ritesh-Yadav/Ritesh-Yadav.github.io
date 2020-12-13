@@ -23,7 +23,7 @@ You can use recipe reader to follow the recipe. It's in beta at the moment. For 
 | **curl**  | `bash -c "$(curl -fsSL https://raw.githubusercontent.com/Ritesh-Yadav/Ritesh-Yadav.github.io/master/assets/scripts/install_recipe_reader.sh)" "paneer_butter_masala.md"` |
 | **wget**  | `bash -c "$(wget -O- https://raw.githubusercontent.com/Ritesh-Yadav/Ritesh-Yadav.github.io/master/assets/scripts/install_recipe_reader.sh)" "paneer_butter_masala.md"`   |
 
-Once you have installed the script, you can use is next time by following command:
+Once you have installed the script, you can use it next time by following command:
 
 ```bash
 bash recipe_reader.sh paneer_butter_masala.md
