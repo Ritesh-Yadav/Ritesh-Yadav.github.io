@@ -16,7 +16,7 @@ Paneer butter masala is also known as butter paneer. It is a rich & creamy curry
 
 # Recipe Reader
 
-You can use recipe reader to follow the recipe. It's in beta at the moment. For best experience use OSX. Please open the terminal and run one of the following command:
+You can use recipe reader to follow the recipe. It's in beta at the moment. For best experience use OSX and turn the volume on. Please open the terminal and run one of the following command:
 
 | Method    | Command                                                                                           |
 |:----------|:--------------------------------------------------------------------------------------------------|
