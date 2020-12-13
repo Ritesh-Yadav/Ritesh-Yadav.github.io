@@ -45,5 +45,7 @@ You can use chicken instead of paneer to make butter chicken. You might want to 
 - Add half cup water approximately 130 ml water and mix well. Cook for 1 minute and add paneer into the gravy.
 - Put the lid on and continue cooking for 2 to 3 minutes. Stir occasionally and make sure curry does not stick to the pan.
 - Add 1 to 2 tablespoon of honey as per your taste. This curry is a bit on the sweeter side. Honey is to reduce the tangy flavour of the tomatoes. Cook for 1 minute with the lid on and stir occasionally. If you do not have honey then you can use sugar.
-- Add 1 tablespoon cream into the curry and stir well. Take fenugreek leaves in your palm and rub nicely, put it inside the curry. Cook for 1 minute with the lid on.
+- Add 1 tablespoon cream into the curry and stir well.
+- Add red food color as per your need and stir well.
+- Take fenugreek leaves in your palm and rub nicely, put it inside the curry. Cook for 1 minute with the lid on.
 - Remove the pan from heat and enjoy the curry with rice, naan or flatbread.
