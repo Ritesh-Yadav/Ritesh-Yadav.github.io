@@ -42,7 +42,7 @@ Serves 2 people  ›  Prep: 5min  ›  Cook: 25min  ›  Ready in: ~30min
 - Put the small pan on the heat and add oil into it. Once the oil is heated, add paneer to it and fry until golden. Be careful while putting paneer into oil, it may splash the oil.
 - Put a pan on the hob on medium to high, and add 1 tablespoon oil and 1 tablespoon Clarified butter to the pan.
 - Once the oil and butter are heated, add onion into the pan. Keep stirring until onions are soft and golden. Let onion become a little crispy or burned. It will take approximately 4 to 5 minutes.
-- Use a hand blender to blend onion a bit, do not make a fine paste. (optional step)
+- Use a hand blender to blend onion a bit, do not make a fine paste. This is optional step.
 - Add tomatoes into the pan and cook until completely disappear in the curry. It will take approximately 3 to 4 minutes.
 - Now add peas into the pan and cook with the lid on. Stir occasionally.
 - Add the spice mix into the curry and cook for some time, until it is cooked nicely.
