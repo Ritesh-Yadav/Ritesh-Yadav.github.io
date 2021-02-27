@@ -71,7 +71,7 @@ At times, I want my scripts to self comment when I am performing some tasks and 
 
 ```bash
 sed -i.bkp "<starting_line_number>, $(( LINENO + 1 )) s/^/#/" <my_script_name>.sh
-echo -e "$BLUE_COLOR Please press any key to continue... $NORMAL_COLOR" && read -r -n 1 -s
+echo -e "Please press any key to continue..." && read -r -n 1 -s
 ```
 
 example: `sed -i.bkp "2, $(( LINENO + 1 )) s/^/#/" test.sh`
