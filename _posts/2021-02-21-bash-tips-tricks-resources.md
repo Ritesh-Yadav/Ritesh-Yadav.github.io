@@ -65,6 +65,17 @@ Use [shellcheck](https://github.com/koalaman/shellcheck) to perform static analy
 
 [BATS](https://github.com/bats-core/bats-core) is a good testing framework if you are looking for writing tests for your bash scripts or even trying to test things using bash.
 
+### Self commenting script
+
+At times, I want my scripts to self comment when I am performing some tasks and don't want to rerun which were already successful.
+
+```bash
+sed -i.bkp "<starting_line_number>, $(( LINENO + 1 )) s/^/#/" <my_script_name>.sh
+echo -e "$BLUE_COLOR Please press any key to continue... $NORMAL_COLOR" && read -r -n 1 -s
+```
+
+example: `sed -i.bkp "2, $(( LINENO + 1 )) s/^/#/" test.sh`
+
 ## Resources
 
 * **Cheatsheet:** [https://devhints.io/bash](https://devhints.io/bash) [[PDF](/assets/docs/bash/DevHints.io.pdf)]
