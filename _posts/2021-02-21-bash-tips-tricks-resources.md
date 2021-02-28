@@ -6,13 +6,14 @@ categories:
 tags:
   - bash
   - tricks
+toc: true
+toc_label: "Index"
+toc_icon: "list-alt"
 ---
 
 A curated list of tips, tricks and resources.
 
 {% include base_path %}
-
-{% include toc title="Index" %}
 
 ## Tips and Tricks
 

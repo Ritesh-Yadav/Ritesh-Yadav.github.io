@@ -11,13 +11,14 @@ tags:
   - tricks
   - awk
   - sed
+toc: true
+toc_label: "Index"
+toc_icon: "list-alt"
 ---
 
 Get formatted certificate from AWS secret manager using different methods.
 
 {% include base_path %}
-
-{% include toc title="Index" %}
 
 ## Problem Statement
 

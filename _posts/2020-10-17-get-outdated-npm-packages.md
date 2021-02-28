@@ -8,13 +8,14 @@ tags:
   - tricks
   - awk
   - npm
+toc: true
+toc_label: "Index"
+toc_icon: "list-alt"
 ---
 
 A custom script built top on NPM outdated which can ignore package and version difference.
 
 {% include base_path %}
-
-{% include toc title="Index" %}
 
 ## Problem Statement
 

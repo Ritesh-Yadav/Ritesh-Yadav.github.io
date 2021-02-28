@@ -10,13 +10,14 @@ tags:
   - Localhost
   - Python
   - CertBot
+toc: true
+toc_label: "Index"
+toc_icon: "list-alt"
 ---
 
 As we are moving towards CI and CD, it's very important to have same environment configuration for different type of environments. In this post, I will explain a common problem related to local dev environment and valid SSL certificate.
 
 {% include base_path %}
-
-{% include toc title="Index" %}
 
 ## Problem Statement
 

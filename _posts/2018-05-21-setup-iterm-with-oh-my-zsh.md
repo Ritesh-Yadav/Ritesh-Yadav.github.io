@@ -9,14 +9,15 @@ tags:
   - Productivity
   - Fira-Code
   - Ligature
+toc: true
+toc_label: "Index"
+toc_icon: "list-alt"
 ---
 
 As a software engineer, we spend significant amount of time in terminal. Terminal in Mac OSX is better than 
 windows but not as good as iTerm2. If you combine iTerm with Zsh and Oh-My-Zsh then what you get is awesomeness.
 
 {% include base_path %}
-
-{% include toc title="Index" %}
 
 ## Install iTerm2
 

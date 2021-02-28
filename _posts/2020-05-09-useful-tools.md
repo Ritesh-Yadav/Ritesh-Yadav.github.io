@@ -7,11 +7,13 @@ tags:
   - Productivity
   - Tools
   - Software
+toc: true
+toc_label: "Index"
+toc_icon: "list-alt"
 ---
 
 A list of tried and tested free tools in MAC, Linux and windows to increase daily productivity and simplify my job 
 {% include base_path %}
-{% include toc title="Index" %}
 
 ## Tools
 

@@ -6,13 +6,14 @@ categories:
 tags:
   - Paneer
   - Recipe
+toc: true
+toc_label: "Index"
+toc_icon: "list-alt"
 ---
 
 Matar Paneer is a rich curry made with paneer, spices, onions, tomatoes and butter. You can enjoy this curry with rice, naan or flatbread. It's bit on mild to medium spicy side if you want.
 
 {% include base_path %}
-
-{% include toc title="Index" %}
 
 # Recipe Reader
 

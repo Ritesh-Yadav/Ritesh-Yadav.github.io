@@ -7,13 +7,14 @@ tags:
   - Heroku
   - Python
   - Flask
+toc: true
+toc_label: "Index"
+toc_icon: "list-alt"
 ---
 
 In this post, I am going to show you how you can deploy a simple app in Heroku. It will be very quick if you have pre-requisite installed in your box. Let's jump on the business.
 
 {% include base_path %}
-
-{% include toc title="Index" %}
 
 ## Prerequisites
 
