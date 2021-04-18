@@ -71,17 +71,19 @@ function get_semantic_versioning_precision(){
 
 function check_outdated_package_versions(){
   package=$1
-  current_version=$(echo "$package" | awk '{print $2}' | grep -o -E "[0-9]+.[0-9]+")
-  latest_version=$(echo "$package" | awk '{print $4}' | grep -o -E "[0-9]+.[0-9]+")
-  precision=$(get_semantic_versioning_precision "$latest_version")
+  if [[ -n "$package" ]]; then
+    current_version=$(echo "$package" | awk '{print $2}' | grep -o -E "[0-9]+.[0-9]+")
+    latest_version=$(echo "$package" | awk '{print $4}' | grep -o -E "[0-9]+.[0-9]+")
+    precision=$(get_semantic_versioning_precision "$latest_version")
 
-  version_diff=$(get_version_diff_based_on_semantic_versioning "$latest_version" "$current_version" "$precision")
-  max_version_diff=$(get_max_version_diff_based_on_semantic_versioning_precision "$precision")
-  need_to_update_package=$(is_update_required_for_package "$max_version_diff" "$version_diff" "$latest_version" "$current_version")
+    version_diff=$(get_version_diff_based_on_semantic_versioning "$latest_version" "$current_version" "$precision")
+    max_version_diff=$(get_max_version_diff_based_on_semantic_versioning_precision "$precision")
+    need_to_update_package=$(is_update_required_for_package "$max_version_diff" "$version_diff" "$latest_version" "$current_version")
 
-  if [ "$need_to_update_package" -eq 1 ]; then
-    ((OUTDATED_PACKAGES_COUNT=OUTDATED_PACKAGES_COUNT+1))
-    printf '%b\n' "$package"
+    if [ "$need_to_update_package" -eq 1 ]; then
+      ((OUTDATED_PACKAGES_COUNT=OUTDATED_PACKAGES_COUNT+1))
+      printf '%b\n' "$package"
+    fi
   fi
 }
 
