@@ -87,7 +87,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 ### Set Theme
 
-There are whole lot of themes to choose from [here](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes). [My personal customized theme](https://github.com/Ritesh-Yadav/Ritesh-Yadav.github.io/blob/master/ritz.zsh-theme) is based on bira theme.
+There are whole lot of themes to choose from [here](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes). [My personal customized theme](https://github.com/Ritesh-Yadav/Ritesh-Yadav.github.io/blob/master/ritz.zsh-theme) is based on bira theme. Also, I have [another slightly modified theme](https://github.com/Ritesh-Yadav/Ritesh-Yadav.github.io/blob/master/agnoster-modified.zsh-theme) based on agnoster theme.
 Change `ZSH_THEME=robbyrussell` to `ZSH_THEME=YOUR_FAV_THEME_NAME` into `~/.zshrc` file. After change reload shell by:
 
 ```bash
